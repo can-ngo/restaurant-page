@@ -1,3 +1,8 @@
+import comtamImg from "./public/comtam.jpg";
+import phoImg from "./public/pho.jpg";
+import hutieuImg from "./public/hutieu.jpg";
+import banhmyImg from "./public/banhmy.jpg";
+
 class Breakfast {
     static content = document.querySelector('#content');
     
@@ -32,15 +37,23 @@ class Breakfast {
     }
 
     static displayFoods = () => {
-        const card = document.createElement('div')
-        card.setAttribute('class', 'card')
-        this.content.appendChild(card);
+        this.foods.forEach(food => {
+            const card = document.createElement('div')
+            card.setAttribute('class', 'card')
+            this.content.appendChild(card);
+            card.innerHTML = `
+            <p><strong>${food.name}</strong></p>
+            <img src="${food.picture}" alt="${food.name}">
+            <p>Giá: <strong>${food.price.toLocaleString()}</strong> VNĐ</p>
+            `
+        })
     }
 
 }
 
-Breakfast.addFood("Com tam", 30000, "Kho", "./src/public/comtam.jpg");
-Breakfast.addFood("Pho", 60000, "Nuoc", "./src/public/comtam.jpg");
-Breakfast.addFood("Hu tieu", 55000, "Nuoc", "./src/public/comtam.jpg");
+Breakfast.addFood("Cơm Tấm", 30000, "Khô", comtamImg);
+Breakfast.addFood("Phở", 60000, "Nước", phoImg);
+Breakfast.addFood("Hủ Tiếu", 55000, "Nước", hutieuImg);
+Breakfast.addFood("Bánh Mỳ", 20000, "Khô", banhmyImg)
 
 export { Breakfast }

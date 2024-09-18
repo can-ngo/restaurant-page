@@ -1,7 +1,53 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 75px 1fr 75px;
+}
 
+header {
+    background-color: #111920;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+
+#headline {
+    grid-column: 1 / 4;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: aliceblue;
+    color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 0.3em;
+    justify-content: center;
+    justify-self: center;
+}
+
+#content {
+    background-color: #b42b4d;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(autofill, 250px);
+    grid-template-rows: 50px;
+    text-align: center;
+}
+
+footer {
+    background-color: #111920;
+    color: white;
 }
