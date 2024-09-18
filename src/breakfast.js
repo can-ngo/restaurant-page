@@ -2,8 +2,16 @@ import comtamImg from "./public/comtam.jpg";
 import phoImg from "./public/pho.jpg";
 import hutieuImg from "./public/hutieu.jpg";
 import banhmyImg from "./public/banhmy.jpg";
+import bunbohueImg from "./public/bunbohue.jpg";
+import xoigaImg from "./public/xoiga.jpg";
+import banhcanhcuaImg from "./public/banhcanhcua.png";
+import supcuaImg from "./public/supcua.jpeg";
+import myyImg from "./public/myy.jpg";
+import nuiImg from "./public/nui.jpg";
+
 
 class Breakfast {
+    
     static content = document.querySelector('#content');
     
     static foods = [];
@@ -37,6 +45,13 @@ class Breakfast {
     }
 
     static displayFoods = () => {
+        // Headline
+        const headline = document.createElement('h1');
+        headline.setAttribute('id','headline');
+        headline.textContent = "Levering your taste!";
+        content.appendChild(headline)
+
+        // Food cards
         this.foods.forEach(food => {
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
@@ -51,9 +66,15 @@ class Breakfast {
 
 }
 
-Breakfast.addFood("Cơm Tấm", 30000, "Khô", comtamImg);
-Breakfast.addFood("Phở", 60000, "Nước", phoImg);
-Breakfast.addFood("Hủ Tiếu", 55000, "Nước", hutieuImg);
-Breakfast.addFood("Bánh Mỳ", 20000, "Khô", banhmyImg)
+Breakfast.addFood("Cơm Tấm", 35000, "Khô", comtamImg);
+Breakfast.addFood("Phở", 50000, "Nước", phoImg);
+Breakfast.addFood("Hủ Tiếu", 40000, "Nước", hutieuImg);
+Breakfast.addFood("Bánh Mỳ", 20000, "Khô", banhmyImg);
+Breakfast.addFood("Bún Bò Huế", 50000, "Nước", bunbohueImg);
+Breakfast.addFood("Xôi Gà", 20000, "Khô", xoigaImg);
+Breakfast.addFood("Bánh Canh Cua", 45000, "Nước", banhcanhcuaImg);
+Breakfast.addFood("Súp Cua", 20000, "Nước", supcuaImg);
+Breakfast.addFood("Mỳ Ý", 25000, "Khô", myyImg);
+Breakfast.addFood("Nui", 30000, "Khô", nuiImg);
 
 export { Breakfast }

@@ -1,12 +1,5 @@
 import "./styles.css";
-import { Breakfast } from "./breakfast";
+import { Home } from "./home.js";
+import { Breakfast } from "./breakfast.js";
 
-const content = document.querySelector('#content')
-
-const headline = document.createElement('h1');
-headline.setAttribute('id','headline');
-headline.textContent = "The 40 Restaurant - Levering your taste!";
-content.appendChild(headline)
-
-console.table(Breakfast.foods)
-Breakfast.displayFoods();
+// Breakfast.displayFoods();

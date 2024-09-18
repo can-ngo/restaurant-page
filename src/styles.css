@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
 body {
+    font-family: Playpen Sans;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 75px 1fr 75px;
+    grid-template-rows: 75px 1fr 50px;
 }
 
 header {
@@ -19,7 +22,7 @@ header {
 }
 
 #headline {
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
 }
 
 .card > img {
@@ -34,20 +37,29 @@ header {
     height: 200px;
     border-radius: 10px;
     padding: 0.3em;
-    justify-content: center;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #content {
     background-color: #b42b4d;
     color: white;
     display: grid;
-    grid-template-columns: repeat(autofill, 250px);
-    grid-template-rows: 50px;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
     text-align: center;
+    gap: 15px;
+    justify-content: center;
 }
 
 footer {
     background-color: #111920;
     color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
