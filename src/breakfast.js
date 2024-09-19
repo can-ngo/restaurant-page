@@ -12,7 +12,7 @@ import nuiImg from "./public/nui.jpg";
 
 class Breakfast {
     
-    static content = document.querySelector('#content');
+    content = document.querySelector('#content');
     
     static foods = [];
     
@@ -55,13 +55,20 @@ class Breakfast {
         this.foods.forEach(food => {
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
-            this.content.appendChild(card);
+            content.appendChild(card);
             card.innerHTML = `
             <p><strong>${food.name}</strong></p>
             <img src="${food.picture}" alt="${food.name}">
             <p>Giá: <strong>${food.price.toLocaleString()}</strong> VNĐ</p>
             `
         })
+
+        // Styling content
+        content.setAttribute('style',`display: grid; 
+                                      grid-template-columns: repeat(auto-fit, 200px);
+                                      grid-template-rows: min-content;
+                                      grid-auto-rows: min-content;        
+                                    `)
     }
 
 }

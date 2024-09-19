@@ -31,9 +31,9 @@ module.exports = {
                 use: "html-loader",
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|webp|svg)$/i,
                 type: "asset/resource",
-            }
+            },
         ],
     },
 };

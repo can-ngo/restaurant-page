@@ -9,7 +9,7 @@ body {
     font-family: Playpen Sans;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 75px 1fr 50px;
+    grid-template-rows: min-content 1fr 50px;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 #headline {
@@ -46,10 +46,10 @@ header {
 #content {
     background-color: #b42b4d;
     color: white;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: min-content;
-    grid-auto-rows: min-content;
+    grid-auto-rows: min-content; */
     text-align: center;
     gap: 15px;
     justify-content: center;
