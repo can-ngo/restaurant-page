@@ -59,7 +59,7 @@ class Breakfast {
             card.innerHTML = `
             <p><strong>${food.name}</strong></p>
             <img src="${food.picture}" alt="${food.name}">
-            <p>Giá: <strong>${food.price.toLocaleString()}</strong> VNĐ</p>
+            <p>Price: <strong>${food.price.toLocaleString()}</strong> VND</p>
             `
         })
 

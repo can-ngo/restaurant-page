@@ -16,9 +16,10 @@ header {
     background-color: #111920;
     color: white;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding: 0.5em 1em;
 }
 
 #headline {
