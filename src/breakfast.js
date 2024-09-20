@@ -45,6 +45,9 @@ class Breakfast {
     }
 
     static displayFoods = () => {
+        const h1 = document.querySelector('h1');
+        h1.textContent = "Vietnamese Breakfast Foods"
+        
         // Headline
         const headline = document.createElement('h1');
         headline.setAttribute('id','headline');
@@ -67,8 +70,13 @@ class Breakfast {
         content.setAttribute('style',`display: grid; 
                                       grid-template-columns: repeat(auto-fit, 200px);
                                       grid-template-rows: min-content;
-                                      grid-auto-rows: min-content;        
+                                      grid-auto-rows: min-content;
+                                      padding: 10px;        
                                     `)
+    }
+
+    static clearDisplay () {
+        content.innerHTML = "";
     }
 
 }

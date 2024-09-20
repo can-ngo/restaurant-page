@@ -7,7 +7,7 @@ class Home {
     static display () {
         
         const h1 = document.querySelector('h1');
-        h1.style.display = 'none';
+        h1.textContent = "CAN NGO RESTAURANT"
 
         content.style.backgroundImage = `url(${backgroundUrl})`;
         content.style.backgroundSize = "cover";
@@ -26,6 +26,11 @@ class Home {
         <hr style="width: 40%;">
         <h3>Hotline: <span style="color: red">1900 10--</span><h3>
         `
+    }
+
+    static clearDisplay () {
+        content.innerHTML = "";
+        content.style.backgroundImage = '';
     }
 }
 

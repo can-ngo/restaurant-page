@@ -8,6 +8,7 @@
 body {
     font-family: Playpen Sans;
     min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     grid-template-rows: min-content 1fr 50px;
 }
@@ -25,6 +26,36 @@ header {
 #headline {
     grid-column: 1 / -1;
 }
+
+#about,
+#country-img,
+#canquyen-img,
+#comtam-img {
+    position: absolute;
+}
+
+#about {
+    width: 50vw;
+    top: 250px;
+    left: 20%;
+}
+
+#country-img {
+    top: 525px;
+    left: 7vw;
+}
+
+#canquyen-img {
+    top: 10px;
+    left: 70vw;
+    z-index: 0;
+}
+
+#comtam-img {
+    left: 5vw;
+    top: 20px;
+}
+
 
 .card > img {
     width: 100%;
@@ -63,4 +94,24 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.blur-border::before {
+    content: "";
+    position: absolute;
+    inset: -100px;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+    mask: 
+    linear-gradient(
+        to top, 
+        transparent 0%,
+        red 100px calc(100% - 100px),
+        transparent 100%), 
+    linear-gradient(
+        to left,
+        transparent 0%,
+        red 100px calc(100% - 100px),
+        transparent 100%);
+    mask-composite: intersect;
 }
