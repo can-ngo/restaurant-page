@@ -10,19 +10,22 @@ const aboutBtn = document.querySelector('#about-btn');
 Home.display();
 
 homeBtn.addEventListener('click', () => {
-    Breakfast.clearDisplay();
-    About.clearDisplay();
+    clearDisplay();
     Home.display();
 })
 
 menuBtn.addEventListener('click', () => {
-    Home.clearDisplay();
-    About.clearDisplay();
+    clearDisplay();
     Breakfast.displayFoods();
 })
 
 aboutBtn.addEventListener('click', () => {
-    Home.clearDisplay();
-    Breakfast.clearDisplay();
+    clearDisplay();
     About.display();
 })
+
+function clearDisplay() {
+    const content = document.querySelector('#content');
+    content.innerHTML = '';
+    content.style.backgroundImage = '';
+}

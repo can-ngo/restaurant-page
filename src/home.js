@@ -4,8 +4,7 @@ class Home {
 
     content = document.querySelector("#content");
     
-    static display () {
-        
+    static display () { 
         const h1 = document.querySelector('h1');
         h1.textContent = "CAN NGO RESTAURANT"
 
@@ -26,11 +25,6 @@ class Home {
         <hr style="width: 40%;">
         <h3>Hotline: <span style="color: red">1900 10--</span><h3>
         `
-    }
-
-    static clearDisplay () {
-        content.innerHTML = "";
-        content.style.backgroundImage = '';
     }
 }
 

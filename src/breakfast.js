@@ -9,8 +9,6 @@ import supcuaImg from "./public/supcua.jpeg";
 import myyImg from "./public/myy.jpg";
 import nuiImg from "./public/nui.jpg";
 
-const x = window.matchMedia("(max-width: 480px");
-
 class Breakfast {
     
     content = document.querySelector('#content');
@@ -67,36 +65,18 @@ class Breakfast {
             `
         })
 
-        // Styling content
-        if (x.matches) {
-            content.setAttribute('style',`display: grid; 
-                                          grid-template-columns: repeat(auto-fit, 300px);
-                                          grid-template-rows: min-content;
-                                          grid-auto-rows: min-content;
-                                          padding: 10px;        
-                                        `)
-        } else {
-
-            content.setAttribute('style',`display: grid; 
-                                      grid-template-columns: repeat(auto-fit, 200px);
-                                      grid-template-rows: min-content;
-                                      grid-auto-rows: min-content;
-                                      padding: 10px;        
-                                    `)
-        }
+        content.setAttribute('style',`display: grid; 
+                                  grid-template-columns: repeat(auto-fit, 200px);
+                                  grid-template-rows: min-content;
+                                  grid-auto-rows: min-content;
+                                  padding: 10px;        
+                                `)
+        
 
     }
-
-    static clearDisplay () {
-        content.innerHTML = "";
-    }
-
 }
 
-x.addEventListener("change", ()=> {
-    Breakfast.clearDisplay();
-    Breakfast.displayFoods();
-})
+
 
 Breakfast.addFood("Cơm Tấm", 35000, "Khô", comtamImg);
 Breakfast.addFood("Phở", 50000, "Nước", phoImg);
