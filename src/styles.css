@@ -27,7 +27,7 @@ header {
 }
 
 #about {
-    width: 100%;
+    width: 60%;
 }
 
 .card > img {
@@ -97,6 +97,10 @@ button:hover {
         width: 250px;
         height: 250px;
         justify-content: space-around;
+    }
+
+    #about {
+        width: 90%;
     }
   
 }
