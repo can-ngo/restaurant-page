@@ -8,6 +8,7 @@ import banhcanhcuaImg from "./public/banhcanhcua.png";
 import supcuaImg from "./public/supcua.jpeg";
 import myyImg from "./public/myy.jpg";
 import nuiImg from "./public/nui.jpg";
+import bunxaoImg from "./public/bunxao.jpg";
 
 class Breakfast {
     
@@ -46,12 +47,6 @@ class Breakfast {
     static displayFoods = () => {
         const h1 = document.querySelector('h1');
         h1.textContent = "Vietnamese Breakfast Foods"
-        
-        // Headline
-        const headline = document.createElement('h1');
-        headline.setAttribute('id','headline');
-        headline.textContent = "Levering your taste!";
-        content.appendChild(headline)
 
         // Food cards
         this.foods.forEach(food => {
@@ -88,5 +83,7 @@ Breakfast.addFood("Bánh Canh Cua", 45000, "Nước", banhcanhcuaImg);
 Breakfast.addFood("Súp Cua", 20000, "Nước", supcuaImg);
 Breakfast.addFood("Mỳ Ý", 25000, "Khô", myyImg);
 Breakfast.addFood("Nui", 30000, "Khô", nuiImg);
+Breakfast.addFood("Bún Xào", 15000, "Khô", bunxaoImg);
+
 
 export { Breakfast }

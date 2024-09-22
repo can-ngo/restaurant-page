@@ -26,6 +26,16 @@ header {
     grid-column: 1 / -1;
 }
 
+#filter-div {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#filter-div select {
+    width: 70%;
+}
+
 #about {
     width: 60%;
 }
@@ -58,6 +68,7 @@ header {
     text-align: center;
     gap: 15px;
     justify-content: center;
+    align-items: center;
 }
 
 footer {
