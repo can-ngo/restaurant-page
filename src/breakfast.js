@@ -44,46 +44,27 @@ class Breakfast {
         }
     }
 
-    static displayFoods = () => {
-        const h1 = document.querySelector('h1');
-        h1.textContent = "Vietnamese Breakfast Foods"
-
-        // Food cards
-        this.foods.forEach(food => {
-            const card = document.createElement('div')
-            card.setAttribute('class', 'card')
-            content.appendChild(card);
-            card.innerHTML = `
-            <p><strong>${food.name}</strong></p>
-            <img src="${food.picture}" alt="${food.name}">
-            <p>Price: <strong>${food.price.toLocaleString()}</strong> VND</p>
-            `
-        })
-
-        content.setAttribute('style',`display: grid; 
-                                  grid-template-columns: repeat(auto-fit, 200px);
-                                  grid-template-rows: min-content;
-                                  grid-auto-rows: min-content;
-                                  padding: 10px;        
-                                `)
-        
-
+    static getDryFoods = () => {
+        return this.foods.filter( food => food.type === 'dry');
     }
+
+    static getWetFoods = () => {
+        return this.foods.filter( food => food.type === 'wet');
+    }
+
 }
 
-
-
-Breakfast.addFood("Cơm Tấm", 35000, "Khô", comtamImg);
-Breakfast.addFood("Phở", 50000, "Nước", phoImg);
-Breakfast.addFood("Hủ Tiếu", 40000, "Nước", hutieuImg);
-Breakfast.addFood("Bánh Mỳ", 20000, "Khô", banhmyImg);
-Breakfast.addFood("Bún Bò Huế", 50000, "Nước", bunbohueImg);
-Breakfast.addFood("Xôi Gà", 20000, "Khô", xoigaImg);
-Breakfast.addFood("Bánh Canh Cua", 45000, "Nước", banhcanhcuaImg);
-Breakfast.addFood("Súp Cua", 20000, "Nước", supcuaImg);
-Breakfast.addFood("Mỳ Ý", 25000, "Khô", myyImg);
-Breakfast.addFood("Nui", 30000, "Khô", nuiImg);
-Breakfast.addFood("Bún Xào", 15000, "Khô", bunxaoImg);
+Breakfast.addFood("Cơm Tấm", 35000, "dry", comtamImg);
+Breakfast.addFood("Phở", 50000, "wet", phoImg);
+Breakfast.addFood("Hủ Tiếu", 40000, "wet", hutieuImg);
+Breakfast.addFood("Bánh Mỳ", 20000, "dry", banhmyImg);
+Breakfast.addFood("Bún Bò Huế", 50000, "wet", bunbohueImg);
+Breakfast.addFood("Xôi Gà", 20000, "dry", xoigaImg);
+Breakfast.addFood("Bánh Canh Cua", 45000, "wet", banhcanhcuaImg);
+Breakfast.addFood("Súp Cua", 20000, "wet", supcuaImg);
+Breakfast.addFood("Mỳ Ý", 25000, "dry", myyImg);
+Breakfast.addFood("Nui", 30000, "wet", nuiImg);
+Breakfast.addFood("Bún Xào", 15000, "dry", bunxaoImg);
 
 
 export { Breakfast }
