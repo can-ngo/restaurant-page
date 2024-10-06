@@ -9,6 +9,7 @@ import supcuaImg from "./public/supcua.jpeg";
 import myyImg from "./public/myy.jpg";
 import nuiImg from "./public/nui.jpg";
 import bunxaoImg from "./public/bunxao.jpg";
+import banhgioImg from "./public/banhgio.jpg";
 
 class Breakfast {
     
@@ -65,6 +66,7 @@ Breakfast.addFood("Súp Cua", 20000, "wet", supcuaImg);
 Breakfast.addFood("Mỳ Ý", 25000, "dry", myyImg);
 Breakfast.addFood("Nui", 30000, "wet", nuiImg);
 Breakfast.addFood("Bún Xào", 15000, "dry", bunxaoImg);
+Breakfast.addFood("Bánh Giò", 15000, "dry", banhgioImg);
 
 
 export { Breakfast }
